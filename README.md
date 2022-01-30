@@ -60,6 +60,16 @@ gcc, make, カーネルソース/ヘッダ, dkmsがインストールされて�
 	$ sudo dkms add px4_drv/0.2.1
 	$ sudo dkms install px4_drv/0.2.1
 
+#### Windowsの場合
+
+Build Tools for Visual Studio を使用してコンパイルする方法を記載します。  
+x64 Native Tools Command Prompt を起動して、以下を実行する。
+
+```powershell
+cd winusb
+msbuild px4_winusb.sln /p:Configuration=Release /p:Platform=x64
+```
+
 ### 3. 確認
 
 #### 3.1 カーネルモジュールのロードの確認
